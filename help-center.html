@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="gmi.png" type="image/png">
+    <link rel="shortcut icon" href="gmi.png" type="image/png">
+    <link rel="apple-touch-icon" href="gmi.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Help Center - GMI Tech | Support & FAQs</title>
+    <meta name="title" content="Help Center - GMI Tech Support & FAQs">
+    <meta name="description" content="Get help with GMI Tech services. Find answers to frequently asked questions, troubleshooting guides, and support resources.">
+    <meta name="keywords" content="GMI Tech help, support center, FAQs, technical support, customer service">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gmitech.in/help-center.html">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+        
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            background: white;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.12);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+        
+        .nav-link {
+            color: #4b5563;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #6366f1;
+        }
+        
+        .section-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        
+        .container-padding {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .container-padding {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container-padding {
+                padding-left: 4rem;
+                padding-right: 4rem;
+            }
+        }
+        
+        /* Mobile Menu Styles */
+        .mobile-menu-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.98);
+            z-index: 100;
+            display: none;
+        }
+
+        .mobile-menu-overlay.active {
+            display: block;
+        }
+
+        /* Accordion Styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+
+        .transition-all {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 100ms;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card shadow-sm">
+        <div class="max-w-7xl mx-auto container-padding">
+            <nav class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="font-display font-bold text-4xl text-gray-900">GMI</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-sm font-medium">About</a>
+                    <a href="services.html" class="nav-link text-sm font-medium">Services</a>
+                    
+                    <a href="contact.html" class="nav-link text-sm font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <a href="https://wa.me/919036717885?text=Hi%20GMI%20Tech%2C%20I%20need%20help%20with%20your%20services." target="_blank" class="hidden md:block btn-primary px-6 py-2.5 rounded-lg text-sm font-semibold">
+                    Get Help
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <div class="flex flex-col h-full p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-display font-bold text-2xl text-gray-900">GMI Tech</span>
+                <button id="close-menu" class="text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex-1">
+                <ul class="space-y-6">
+                    <li><a href="index.html" class="text-xl font-medium text-gray-900 block py-2 hover:text-purple-600">Home</a></li>
+                    <li><a href="about.html" class="text-xl font-medium text-gray-900 block py-2 hover:text-purple-600">About</a></li>
+                    <li><a href="services.html" class="text-xl font-medium text-gray-900 block py-2 hover:text-purple-600">Services</a></li>
+                    
+                    <li><a href="contact.html" class="text-xl font-medium text-gray-900 block py-2 hover:text-purple-600">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="pt-8">
+                <a href="https://wa.me/919036717885?text=Hi%20GMI%20Tech%2C%20I%20need%20help%20with%20your%20services." target="_blank" class="btn-primary w-full py-3 rounded-lg font-semibold block text-center">
+                    Get Help
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 container-padding relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-semibold text-xs uppercase tracking-widest">Help & Support</span>
+                <h1 class="font-display text-5xl lg:text-6xl font-bold mt-4 mb-6 text-gray-900">
+                    Help <span class="gradient-text">Center</span>
+                </h1>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    Find answers to common questions, troubleshooting guides, and get support for GMI Tech services.
+                </p>
+            </div>
+            
+            <!-- Quick Help Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <a href="#faq" class="service-card rounded-xl p-6 text-center hover:no-underline">
+                    <div class="w-12 h-12 rounded-lg bg-indigo-50 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold mb-2 text-gray-900">FAQs</h3>
+                    <p class="text-gray-600 text-sm">Frequently asked questions</p>
+                </a>
+                
+                <a href="project-support.html" class="service-card rounded-xl p-6 text-center hover:no-underline">
+                    <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold mb-2 text-gray-900">Project Support</h3>
+                    <p class="text-gray-600 text-sm">Existing project help</p>
+                </a>
+                
+                <a href="#troubleshooting" class="service-card rounded-xl p-6 text-center hover:no-underline">
+                    <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold mb-2 text-gray-900">Troubleshooting</h3>
+                    <p class="text-gray-600 text-sm">Common issues & solutions</p>
+                </a>
+                
+                <a href="#contact-support" class="service-card rounded-xl p-6 text-center hover:no-underline">
+                    <div class="w-12 h-12 rounded-lg bg-amber-50 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold mb-2 text-gray-900">Contact Support</h3>
+                    <p class="text-gray-600 text-sm">Direct support channels</p>
+                </a>
+            </div>
+            
+            <!-- FAQ Section -->
+            <section id="faq" class="mb-20">
+                <h2 class="font-display text-4xl font-bold text-center mb-12 text-gray-900">
+                    Frequently Asked <span class="gradient-text">Questions</span>
+                </h2>
+                
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-button w-full text-left p-6 bg-white rounded-xl border border-gray-200 hover:border-purple-300 transition-all flex justify-between items-center">
+                            <span class="font-semibold text-gray-900">What services does GMI Tech provide?</span>
+                            <svg class="w-5 h-5 text-gray-500 transition-transform accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="accordion-content bg-white rounded-b-xl border-x border-b border-gray-200">
+                            <div class="px-6 pb-6 pt-4 text-gray-600">
+                                GMI Tech provides comprehensive digital solutions including:
+                                <ul class="mt-2 space-y-1 ml-4">
+                                    <li>• Website design and development</li>
+                                    <li>• Mobile app development (iOS & Android)</li>
+                                    <li>• UI/UX design and prototyping</li>
+                                    <li>• Security solutions and audits</li>
+                                    <li>• Web application development</li>
+                                    <li>• E-commerce solutions</li>
+                                    <li>• Website maintenance and support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-button w-full text-left p-6 bg-white rounded-xl border border-gray-200 hover:border-purple-300 transition-all flex justify-between items-center">
+                            <span class="font-semibold text-gray-900">How long does a typical website project take?</span>
+                            <svg class="w-5 h-5 text-gray-500 transition-transform accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="accordion-content bg-white rounded-b-xl border-x border-b border-gray-200">
+                            <div class="px-6 pb-6 pt-4 text-gray-600">
+                                Project timelines vary based on complexity:
+                                <ul class="mt-2 space-y-1 ml-4">
+                                    <li>• Basic website: 2-4 weeks</li>
+                                    <li>• E-commerce website: 4-8 weeks</li>
+                                    <li>• Custom web application: 6-12 weeks</li>
+                                    <li>• Mobile app: 8-16 weeks</li>
+                                </ul>
+                                <p class="mt-2">Timelines may vary based on project requirements and client responsiveness.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-button w-full text-left p-6 bg-white rounded-xl border border-gray-200 hover:border-purple-300 transition-all flex justify-between items-center">
+                            <span class="font-semibold text-gray-900">What is your pricing structure?</span>
+                            <svg class="w-5 h-5 text-gray-500 transition-transform accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="accordion-content bg-white rounded-b-xl border-x border-b border-gray-200">
+                            <div class="px-6 pb-6 pt-4 text-gray-600">
+                                We offer flexible pricing based on project requirements:
+                                <ul class="mt-2 space-y-1 ml-4">
+                                    <li>• Fixed-price projects for well-defined requirements</li>
+                                    <li>• Hourly rates for ongoing work or maintenance</li>
+                                    <li>• Monthly retainer packages for long-term support</li>
+                                    <li>• Custom quotes for enterprise solutions</li>
+                                </ul>
+                                <p class="mt-2">Contact us for a detailed quote tailored to your specific needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-button w-full text-left p-6 bg-white rounded-xl border border-gray-200 hover:border-purple-300 transition-all flex justify-between items-center">
+                            <span class="font-semibold text-gray-900">Do you provide ongoing maintenance and support?</span>
+                            <svg class="w-5 h-5 text-gray-500 transition-transform accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="accordion-content bg-white rounded-b-xl border-x border-b border-gray-200">
+                            <div class="px-6 pb-6 pt-4 text-gray-600">
+                                Yes, we offer comprehensive maintenance and support packages:
+                                <ul class="mt-2 space-y-1 ml-4">
+                                    <li>• Regular security updates</li>
+                                    <li>• Performance optimization</li>
+                                    <li>• Content updates and changes</li>
+                                    <li>• Bug fixes and troubleshooting</li>
+                                    <li>• Backup management</li>
+                                    <li>• Technical support via email and phone</li>
+                                </ul>
+                                <p class="mt-2">We offer monthly, quarterly, and annual support plans.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="accordion-item">
+                        <button class="accordion-button w-full text-left p-6 bg-white rounded-xl border border-gray-200 hover:border-purple-300 transition-all flex justify-between items-center">
+                            <span class="font-semibold text-gray-900">What technologies do you work with?</span>
+                            <svg class="w-5 h-5 text-gray-500 transition-transform accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="accordion-content bg-white rounded-b-xl border-x border-b border-gray-200">
+                            <div class="px-6 pb-6 pt-4 text-gray-600">
+                                We work with modern technologies and frameworks:
+                                <ul class="mt-2 space-y-1 ml-4">
+                                    <li>• Frontend: HTML5, CSS3, JavaScript, React, Vue.js, Angular</li>
+                                    <li>• Backend: Node.js, Python, PHP, Laravel, Express.js</li>
+                                    <li>• Mobile: React Native, Flutter, Swift, Kotlin</li>
+                                    <li>• Databases: MySQL, PostgreSQL, MongoDB, Firebase</li>
+                                    <li>• CMS: WordPress, Shopify, Magento, custom CMS</li>
+                                    <li>• Cloud: AWS, Google Cloud, Azure, DigitalOcean</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Troubleshooting Section -->
+            <section id="troubleshooting" class="mb-20">
+                <h2 class="font-display text-4xl font-bold text-center mb-12 text-gray-900">
+                    Common <span class="gradient-text">Troubleshooting</span>
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass-card rounded-xl p-6">
+                        <div class="w-12 h-12 rounded-lg bg-red-50 flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.998-.833-2.732 0L4.346 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3 text-gray-900">Website Loading Issues</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            If your website is loading slowly or not loading at all:
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-red-500 rounded-full mt-2"></span>
+                                <span>Clear your browser cache</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-red-500 rounded-full mt-2"></span>
+                                <span>Check your internet connection</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-red-500 rounded-full mt-2"></span>
+                                <span>Try accessing from a different browser</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-red-500 rounded-full mt-2"></span>
+                                <span>Contact us for server status check</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="glass-card rounded-xl p-6">
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3 text-gray-900">Mobile App Issues</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Common mobile app troubleshooting:
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-blue-500 rounded-full mt-2"></span>
+                                <span>Update the app to latest version</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-blue-500 rounded-full mt-2"></span>
+                                <span>Restart your mobile device</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-blue-500 rounded-full mt-2"></span>
+                                <span>Check app permissions in settings</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-blue-500 rounded-full mt-2"></span>
+                                <span>Reinstall the application</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="glass-card rounded-xl p-6">
+                        <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3 text-gray-900">Security Concerns</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Security-related issues and solutions:
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-green-500 rounded-full mt-2"></span>
+                                <span>Change passwords regularly</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-green-500 rounded-full mt-2"></span>
+                                <span>Enable two-factor authentication</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-green-500 rounded-full mt-2"></span>
+                                <span>Report suspicious activities immediately</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-green-500 rounded-full mt-2"></span>
+                                <span>Keep software updated</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="glass-card rounded-xl p-6">
+                        <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3 text-gray-900">Payment & Billing</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Payment-related questions and issues:
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-purple-500 rounded-full mt-2"></span>
+                                <span>Check payment confirmation email</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-purple-500 rounded-full mt-2"></span>
+                                <span>Verify payment method details</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-purple-500 rounded-full mt-2"></span>
+                                <span>Contact your bank for transaction status</span>
+                            </li>
+                            <li class="flex items-start space-x-2 text-sm text-gray-600">
+                                <span class="w-1 h-1 bg-purple-500 rounded-full mt-2"></span>
+                                <span>Request invoice or receipt</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Contact Support Section -->
+            <section id="contact-support" class="mb-20">
+                <h2 class="font-display text-4xl font-bold text-center mb-12 text-gray-900">
+                    Contact <span class="gradient-text">Support</span>
+                </h2>
+                
+                <div class="glass-card rounded-2xl p-8 lg:p-12">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="w-16 h-16 rounded-full bg-indigo-50 flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-display text-xl font-bold mb-2 text-gray-900">Email Support</h3>
+                            <p class="text-gray-600 text-sm mb-3">For detailed queries and documentation</p>
+                            <a href="mailto:gmitech@zohomail.in" class="text-indigo-600 font-medium hover:text-indigo-700">gmitech@zohomail.in</a>
+                            <p class="text-gray-500 text-xs mt-2">Response within 24 hours</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 00.948.684l1.498 4.493a1 1 0 00.502.756l2.048 1.024a11.042 11.042 0 010 1.986l-2.048 1.024a1 1 0 00-.502.756l-1.498 4.493a1 1 0 00-.948.684H5a2 2 0 01-2-2V5z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-display text-xl font-bold mb-2 text-gray-900">Phone Support</h3>
+                            <p class="text-gray-600 text-sm mb-3">For urgent issues and immediate assistance</p>
+                            <a href="tel:+919036717885" class="text-green-600 font-medium hover:text-green-700">+91 90367 17885</a>
+                            <p class="text-gray-500 text-xs mt-2">Mon-Sat, 9AM-6PM</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-16 h-16 rounded-full bg-amber-50 flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-5.421 3.145-8.354 9.75-6.514 15.88 1.516 4.978 5.112 8.884 9.563 10.289 5.552 1.717 11.695.306 15.984-3.643 3.19-2.954 5.131-7.099 5.427-11.585.112-1.823-.165-3.64-.648-5.398l-.12-.495c-.135-.664-.594-1.417-1.239-1.838-.721-.502-1.522-.38-2.399.187-.878.563-1.707 1.189-2.582 1.79-.639-.304-1.169-.214-1.754.473-.294.338-.682.883-1.262 1.78-.231.168-.44.326-.66.372-.122.026-.251.043-.383.043-.987-.043-1.63-.571-2.054-1.229l-1.728-2.873c-.308-.513-.692-.816-1.165-1.063-.34-.179-.717-.224-1.098-.15-.38.075-.711.32-.987.781-.275.462-.635 1.253-.983 2.366-.174.55-.402 1.268-.693 2.16-.291.892-.657 1.993-1.088 3.302"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-display text-xl font-bold mb-2 text-gray-900">WhatsApp Support</h3>
+                            <p class="text-gray-600 text-sm mb-3">For quick questions and chat support</p>
+                            <a href="https://wa.me/919036717885?text=Hi%20GMI%20Tech%20Support,%20I%20need%20help%20with..." target="_blank" class="text-amber-600 font-medium hover:text-amber-700">Chat on WhatsApp</a>
+                            <p class="text-gray-500 text-xs mt-2">Quick response, usually within hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 pt-8 border-t border-gray-200 text-center">
+                        <h4 class="font-display text-xl font-bold mb-4 text-gray-900">Still Need Help?</h4>
+                        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                            If you couldn't find what you're looking for, please don't hesitate to contact us directly. Our support team is ready to help you.
+                        </p>
+                        <a href="contact.html" class="btn-primary px-8 py-4 rounded-lg font-semibold inline-block">
+                            Contact Us Now
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <section class="py-16 container-padding border-t border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-display font-bold mb-4 text-gray-900">GMI Tech</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Building innovative digital solutions for startups and businesses worldwide.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gray-900">Useful Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-600 text-sm hover:text-purple-600 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-600 text-sm hover:text-purple-600 transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-600 text-sm hover:text-purple-600 transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-600 text-sm hover:text-purple-600 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gray-900">Technologies</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 text-sm hover:text-purple-600 transition-colors">HTML, CSS, JavaScript</a></li>
+                        <li><a href="#" class="text-gray-600 text-sm hover:text-purple-600 transition-colors">React & Node.js</a></li>
+                        <li><a href="#" class="text-gray-600 text-sm hover:text-purple-600 transition-colors">Android & iOS</a></li>
+                        <li><a href="#" class="text-gray-600 text-sm hover:text-purple-600 transition-colors">Cloud & Hosting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gray-900">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="help-center.html" class="text-gray-600 text-sm hover:text-purple-600 transition-colors">Help Center</a></li>
+                        <li><a href="project-support.html" class="text-gray-600 text-sm hover:text-purple-600 transition-colors">Project Support</a></li>
+                        <li><a href="terms.html" class="text-gray-600 text-sm hover:text-purple-600 transition-colors">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-gray-600 text-sm hover:text-purple-600 transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 pt-8 text-center">
+                <p class="text-gray-500 text-sm">
+                    © GMI — All Rights Reserved<br>
+                    Designed & Developed by GMI Tech
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+            });
+        }
+
+        if (closeMenuButton) {
+            closeMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        }
+
+        // Close menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        if (mobileLinks.length > 0) {
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+        
+        // Accordion functionality
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.closest('.accordion-item');
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('.accordion-icon');
+                const isActive = content.classList.contains('active');
+                
+                // Close all accordions
+                document.querySelectorAll('.accordion-content').forEach(item => {
+                    item.classList.remove('active');
+                    item.style.maxHeight = '0px';
+                });
+                
+                document.querySelectorAll('.accordion-icon').forEach(ic => {
+                    ic.style.transform = 'rotate(0deg)';
+                });
+                
+                // Open current if it was closed
+                if (!isActive) {
+                    content.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
